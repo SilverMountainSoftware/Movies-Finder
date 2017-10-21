@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import {MoviesService} from '../movies.service';
+import { Cast, Person } from '../interfaces/movies';
 
 @Component({
   selector: 'app-actor',
@@ -9,8 +10,8 @@ import {MoviesService} from '../movies.service';
   styleUrls: ['./actor.component.css']
 })
 export class ActorComponent implements OnInit {
-  person: Object;
-  movies: Array<Object>;
+  person: Person;
+  movies: Array<Cast>;
   constructor(private _moviesSerice: MoviesService, private router: ActivatedRoute,) {
 
   }

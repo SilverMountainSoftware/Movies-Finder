@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Movie } from '../interfaces/movies';
 
 @Component({
   selector: 'movie-card',
@@ -8,6 +9,6 @@ import { Component, Input } from '@angular/core';
 export class MovieCardComponent {
 
   @Input()
-  movie: Object;
+  movie: Movie;
 
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-
-import {MoviesService} from '../movies.service';
+import { MoviesService } from '../movies.service';
+import { TVShow, Video } from '../interfaces/movies';
 
 @Component({
   selector: 'app-serie',
@@ -10,13 +10,13 @@ import {MoviesService} from '../movies.service';
   styleUrls: ['./serie.component.css']
 })
 export class SerieComponent implements OnInit {
-  serie: Object;
-  video: Object;
+  serie: TVShow;
+  video: Video;
   constructor(
     private _moviesServices: MoviesService,
     private router: ActivatedRoute,
     private sanitizer: DomSanitizer
-    ) {
+  ) {
 
   }
 
@@ -27,9 +27,9 @@ export class SerieComponent implements OnInit {
         this.serie = serie;
       });
       this._moviesServices.getSerieVideos(id).subscribe(res => {
-        if(res.results && res.results.length) {
-          this.video = res.results[0];        
-          this.video['url'] = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key']);
+        if (res.results && res.results.length) {
+          this.video = res.results[0];
+          this.video.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key']);
         }
       });
     })
