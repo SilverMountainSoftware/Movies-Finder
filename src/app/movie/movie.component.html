@@ -4,6 +4,9 @@
     <p>
       <a *ngIf="movie.homepage" href="{{movie.homepage}}" class="btn btn-info btn-block" target="_blank">Visit Movies Website</a>
     </p>
+    <p>
+      <a *ngIf="movie.imdb_id" href="http://www.imdb.com/title/{{movie.imdb_id}}/parentalguide" class="btn btn-info btn-block" target="_blank">Parents Guide</a>
+    </p>
   </div>
   <div class="col-md-8">
     <h2>{{movie.title}}

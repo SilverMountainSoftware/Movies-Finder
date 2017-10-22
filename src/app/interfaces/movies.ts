@@ -1,5 +1,62 @@
 import { SafeResourceUrl } from '@angular/platform-browser/src/security/dom_sanitization_service';
 
+export interface TVShow {
+  backdrop_path: string;
+  created_by: CreatedBy[];
+  episode_run_time: number[];
+  first_air_date: string;
+  genres: Genre[];
+  homepage: string;
+  id: number;
+  in_production: boolean;
+  languages: string[];
+  last_air_date: string;
+  name: string;
+  networks: Network[];
+  number_of_episodes: number;
+  number_of_seasons: number;
+  origin_country: string[];
+  original_language: string;
+  original_name: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  production_companies: ProductionCompany[];
+  seasons: Season[];
+  status: string;
+  type: string;
+  vote_average: number;
+  vote_count: number;
+}
+
+export interface Movie {
+  adult: boolean;
+  backdrop_path: string;
+  belongs_to_collection?: any;
+  budget: number;
+  genres: Genre[];
+  homepage: string;
+  id: number;
+  imdb_id: string;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  popularity: number;
+  poster_path?: any;
+  production_companies: ProductionCompany[];
+  production_countries: ProductionCountry[];
+  release_date: string;
+  revenue: number;
+  runtime: number;
+  spoken_languages: SpokenLanguage[];
+  status: string;
+  tagline: string;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
+}
+
 export interface Cast {
   character: string;
   credit_id: string;
@@ -108,35 +165,6 @@ export interface Season {
   season_number: number;
 }
 
-export interface TVShow {
-  backdrop_path: string;
-  created_by: CreatedBy[];
-  episode_run_time: number[];
-  first_air_date: string;
-  genres: Genre[];
-  homepage: string;
-  id: number;
-  in_production: boolean;
-  languages: string[];
-  last_air_date: string;
-  name: string;
-  networks: Network[];
-  number_of_episodes: number;
-  number_of_seasons: number;
-  origin_country: string[];
-  original_language: string;
-  original_name: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  production_companies: ProductionCompany[];
-  seasons: Season[];
-  status: string;
-  type: string;
-  vote_average: number;
-  vote_count: number;
-}
-
 export interface Serie {
   id: string;
   iso_639_1: string;
@@ -199,34 +227,6 @@ export interface SpokenLanguage {
 
 export interface Movies {
   Movie: Movie[];
-}
-
-export interface Movie {
-  adult: boolean;
-  backdrop_path: string;
-  belongs_to_collection?: any;
-  budget: number;
-  genres: Genre[];
-  homepage: string;
-  id: number;
-  imdb_id: string;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path?: any;
-  production_companies: ProductionCompany[];
-  production_countries: ProductionCountry[];
-  release_date: string;
-  revenue: number;
-  runtime: number;
-  spoken_languages: SpokenLanguage[];
-  status: string;
-  tagline: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
 }
 
 export interface PopularTV {
