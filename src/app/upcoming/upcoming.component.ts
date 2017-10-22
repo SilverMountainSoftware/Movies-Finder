@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MoviesService} from '../movies.service';
+import { UpcomingMovie, SearchMovie } from '../interfaces/movies';
 
 @Component({
   selector: 'app-upcoming',
@@ -7,8 +8,8 @@ import {MoviesService} from '../movies.service';
   styleUrls: ['./upcoming.component.css']
 })
 export class UpcomingComponent implements OnInit {
-  movies: Array<Object>;
-  searchRes: Array<Object>;
+  movies: Array<UpcomingMovie>;
+  searchRes: Array<SearchMovie>;
   searchStr: string;
 
   constructor(private _moviesService: MoviesService) {

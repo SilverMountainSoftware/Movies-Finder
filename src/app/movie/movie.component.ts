@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesService } from '../movies.service';
-import { Video, Cast, Movie } from '../interfaces/movies';
+import { Video, Cast, Movie, SimilarMovie, Review, CreditCast } from '../interfaces/movies';
 
 @Component({
   selector: 'app-movie',
@@ -11,9 +11,9 @@ import { Video, Cast, Movie } from '../interfaces/movies';
 })
 export class MovieComponent implements OnInit {
   movie: Movie;
-  reviews: Array<Object>;
-  similarMovies: Array<Object>;
-  cast: Array<Cast>;
+  reviews: Array<Review>;
+  similarMovies: Array<SimilarMovie>;
+  cast: Array<CreditCast>;
   video: Video;
   constructor(
     private _moviesServices: MoviesService,

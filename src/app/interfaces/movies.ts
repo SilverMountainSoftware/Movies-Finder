@@ -229,3 +229,114 @@ export interface Movie {
   vote_count: number;
 }
 
+export interface PopularTV {
+  poster_path: string;
+  popularity: number;
+  id: number;
+  backdrop_path: string;
+  vote_average: number;
+  overview: string;
+  first_air_date: string;
+  origin_country: string[];
+  genre_ids: number[];
+  original_language: string;
+  vote_count: number;
+  name: string;
+  original_name: string;
+}
+
+export interface PopularTVShows {
+  page: number;
+  results: PopularTV[];
+  total_results: number;
+  total_pages: number;
+}
+
+export interface UpcomingMovie {
+  poster_path: string;
+  adult: boolean;
+  overview: string;
+  release_date: string;
+  genre_ids: number[];
+  id: number;
+  original_title: string;
+  original_language: string;
+  title: string;
+  backdrop_path: string;
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  vote_average: number;
+}
+
+export interface Dates {
+  maximum: string;
+  minimum: string;
+}
+
+export interface UpcomingMovies {
+  page: number;
+  results: UpcomingMovie[];
+  dates: Dates;
+  total_pages: number;
+  total_results: number;
+}
+
+export interface SearchMovie {
+  poster_path: string;
+  adult: boolean;
+  overview: string;
+  release_date: string;
+  genre_ids: number[];
+  id: number;
+  original_title: string;
+  original_language: string;
+  title: string;
+  backdrop_path: string;
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  vote_average: number;
+}
+
+export interface SearchMovies {
+  page: number;
+  results: SearchMovie[];
+  total_results: number;
+  total_pages: number;
+}
+
+export interface SimilarMovie {
+  adult: boolean;
+  backdrop_path?: any;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  release_date: string;
+  poster_path?: any;
+  popularity: number;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
+}
+
+export interface Review {
+  id: string;
+  author: string;
+  content: string;
+  url: string;
+}
+
+export interface CreditCast {
+  cast_id: number;
+  character: string;
+  credit_id: string;
+  gender: number;
+  id: number;
+  name: string;
+  order: number;
+  profile_path: string;
+}
