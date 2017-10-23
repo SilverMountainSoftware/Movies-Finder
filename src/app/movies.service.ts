@@ -56,6 +56,7 @@ export class MoviesService {
   getMovie(id: string) {
     let search = new URLSearchParams();
     search.set('api_key', this.apikey);
+    search.set('append_to_response', 'release_dates');
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();

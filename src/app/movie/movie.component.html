@@ -5,7 +5,8 @@
       <a *ngIf="movie.homepage" href="{{movie.homepage}}" class="btn btn-info btn-block" target="_blank">Visit Movies Website</a>
     </p>
     <p>
-      <a *ngIf="movie.imdb_id" href="http://www.imdb.com/title/{{movie.imdb_id}}/parentalguide" class="btn btn-info btn-block" target="_blank">Parents Guide</a>
+      <a *ngIf="movie.imdb_id" href="http://www.imdb.com/title/{{movie.imdb_id}}/parentalguide" class="btn btn-info btn-block"
+        target="_blank">Parents Guide</a>
     </p>
   </div>
   <div class="col-md-8">
@@ -25,6 +26,18 @@
     <p>
       {{movie.overview}}
     </p>
+    <h3>Certifications</h3>
+    <div *ngFor="let releasedates of movie.release_dates.results">
+      <span *ngFor="let release of releasedates.release_dates">
+        <span *ngIf="release.certification && release.certification.length > 0">
+          {{ releasedates.iso_3166_1 }}
+          {{ release.certification }}
+          {{ release.iso_639_1}}
+        </span>
+      </span>
+    </div>
+    <p>
+    </p>
     <!--Casts-->
     <div class="row is-flex" *ngIf="cast && cast.length > 0">
       <div class="col-md-12">
@@ -34,9 +47,11 @@
         <div class="thumbnail">
           <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt="">
           <div class="caption">
-            <h6 class="text-center"><a routerLink="/actor/{{actor.id}}">{{actor.name}}</a></h6>
+            <h6 class="text-center">
+              <a routerLink="/actor/{{actor.id}}">{{actor.name}}</a>
+            </h6>
           </div>
-        </div >
+        </div>
       </div>
     </div>
     <!--Casts-->
@@ -69,7 +84,11 @@
   <div class="col-md-6" *ngFor="let review of reviews">
     <blockquote>
       <p class="text-justify">{{review.content}}</p>
-      <footer><cite title="{{review.author}}"><a href="{{review.url}}" target="_blank">{{review.author}}</a></cite></footer>
+      <footer>
+        <cite title="{{review.author}}">
+          <a href="{{review.url}}" target="_blank">{{review.author}}</a>
+        </cite>
+      </footer>
     </blockquote>
   </div>
 </div>

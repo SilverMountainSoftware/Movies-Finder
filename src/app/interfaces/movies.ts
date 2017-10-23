@@ -29,7 +29,25 @@ export interface TVShow {
   vote_count: number;
 }
 
+export interface ReleaseDate {
+  certification: string;
+  iso_639_1: string;
+  note: string;
+  release_date: Date;
+  type: number;
+}
+
+export interface ReleaseDates {
+  iso_3166_1: string;
+  release_dates: ReleaseDate[];
+}
+
+export interface ReleaseDatesResults {
+  results: ReleaseDates[];
+}
+
 export interface Movie {
+  release_dates: ReleaseDatesResults;
   adult: boolean;
   backdrop_path: string;
   belongs_to_collection?: any;

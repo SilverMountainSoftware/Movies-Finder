@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MoviesService} from './movies.service';
+import { Genre } from './interfaces/movies';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import {MoviesService} from './movies.service';
   providers: [MoviesService]
 })
 export class AppComponent {
-  genres: Array<Object>;
+  genres: Array<Genre>;
 
   constructor(private _moviesServices: MoviesService) {
     this._moviesServices.getGenres().subscribe(res => {
