@@ -3,7 +3,7 @@ import { MoviesService } from '../movies.service';
 import { PopularTV } from '../interfaces/movies';
 
 @Component({
-  selector: 'app-popular-series',
+  selector: 'mf-app-popular-series',
   templateUrl: './popular-series.component.html',
   styleUrls: ['./popular-series.component.css']
 })

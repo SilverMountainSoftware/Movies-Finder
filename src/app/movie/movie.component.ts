@@ -5,7 +5,7 @@ import { MoviesService } from '../movies.service';
 import { Video, Cast, Movie, SimilarMovie, Review, CreditCast } from '../interfaces/movies';
 
 @Component({
-  selector: 'app-movie',
+  selector: 'mf-movie-component',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
@@ -33,7 +33,7 @@ export class MovieComponent implements OnInit {
         this.reviews = res.results;
       });
       this._moviesServices.getMovieCredits(id).subscribe(res => {
-        res.cast = res.cast.filter((item) => { return item.profile_path });
+        res.cast = res.cast.filter((item) => { return item.profile_path; });
         this.cast = res.cast.slice(0, 4);
       });
       this._moviesServices.getMovieVideos(id).subscribe(res => {
@@ -47,7 +47,7 @@ export class MovieComponent implements OnInit {
 
         this.similarMovies = res.results.slice(0, 12);
       });
-    })
+    });
   }
 
 }

@@ -5,22 +5,24 @@
       <img src="assets/img/abstract-image.jpg" *ngIf="!person.profile_path">
       <div class="caption">
         <h4 class="text-ellipsis">
-          {{person.name}}
+          {{ person.name }}
         </h4>
-        <p><strong>Birthday: </strong>{{person.birthday}}</p>
-        <p><strong>Place of Birth: </strong>{{person.place_of_birth}}</p>
+        <p>
+          <strong>Birthday: </strong>{{ person.birthday }}</p>
+        <p>
+          <strong>Place of Birth: </strong>{{ person.place_of_birth }}</p>
         <p>
           <strong>Popularity</strong>
           <small class="label label-success pull-right">
-              {{person.popularity}}
-              <i class="glyphicon glyphicon-star"></i>
-            </small>
+            {{ person.popularity }}
+            <i class="glyphicon glyphicon-star"></i>
+          </small>
         </p>
       </div>
       <p>
         <a *ngIf="person.imdb_id" href="http://www.imdb.com/name/{{person.imdb_id}}" class="btn btn-info btn-block" target="_blank">IMDB</a>
       </p>
-      </div>
+    </div>
   </div>
   <div class="col-md-9">
     <h3 class="orange-text">Movies</h3>

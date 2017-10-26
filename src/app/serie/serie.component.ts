@@ -5,7 +5,7 @@ import { MoviesService } from '../movies.service';
 import { TVShow, Video } from '../interfaces/movies';
 
 @Component({
-  selector: 'app-serie',
+  selector: 'mf-app-serie',
   templateUrl: './serie.component.html',
   styleUrls: ['./serie.component.css']
 })
@@ -32,7 +32,7 @@ export class SerieComponent implements OnInit {
           this.video.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video['key']);
         }
       });
-    })
+    });
   }
 
 }

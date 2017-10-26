@@ -5,14 +5,14 @@ import {MoviesService} from '../movies.service';
 import { Cast, Person } from '../interfaces/movies';
 
 @Component({
-  selector: 'app-actor',
+  selector: 'mf-actor',
   templateUrl: './actor.component.html',
   styleUrls: ['./actor.component.css']
 })
 export class ActorComponent implements OnInit {
   person: Person;
   movies: Array<Cast>;
-  constructor(private _moviesSerice: MoviesService, private router: ActivatedRoute,) {
+  constructor(private _moviesSerice: MoviesService, private router: ActivatedRoute, ) {
 
   }
 
@@ -25,7 +25,7 @@ export class ActorComponent implements OnInit {
       this._moviesSerice.getPersonCast(id).subscribe(res => {
         this.movies = res.cast;
       });
-    })
+    });
   }
 
 }

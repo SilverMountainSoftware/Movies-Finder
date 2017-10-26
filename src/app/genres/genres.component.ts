@@ -5,7 +5,7 @@ import {MoviesService} from '../movies.service';
 import { Movies } from '../interfaces/movies';
 
 @Component({
-  selector: 'app-genres',
+  selector: 'mf-genres',
   templateUrl: './genres.component.html',
   styleUrls: ['./genres.component.css']
 })
@@ -26,7 +26,7 @@ export class GenresComponent implements OnInit {
       this._moviesServices.getMoviesByGenre(id).subscribe(res => {
         this.movies = res.results;
       });
-    })
+    });
   }
 
 }

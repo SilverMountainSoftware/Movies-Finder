@@ -18,7 +18,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/discover/movie?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getInTheaters() {
@@ -30,7 +30,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/discover/movie?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getTopRatedMovies() {
@@ -39,7 +39,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/top_rated?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   searchMovies(searchStr: string) {
@@ -50,7 +50,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/search/movie?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getMovie(id: string) {
@@ -60,7 +60,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getGenres() {
@@ -70,7 +70,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/genre/movie/list?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getMoviesByGenre(id: string) {
@@ -79,7 +79,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/genre/' + id + '/movies?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getMovieReviews(id: string) {
@@ -88,7 +88,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '/reviews?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getMovieVideos(id: string) {
@@ -97,7 +97,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '/videos?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getSimilarMovies(id: string) {
@@ -106,7 +106,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '/similar?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getMovieCredits(id: string) {
@@ -115,7 +115,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/' + id + '/credits?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getUpComingMovies() {
@@ -124,7 +124,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/movie/upcoming?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getPopularSeries() {
@@ -133,7 +133,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/tv/popular?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getTopRatedSeries() {
@@ -142,7 +142,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/tv/top_rated?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getSerieDetails(id: string) {
@@ -151,7 +151,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/tv/' + id + '?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getSerieVideos(id: string) {
@@ -160,7 +160,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/tv/' + id + '/videos?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getPersonDetail(id: string) {
@@ -169,7 +169,7 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/person/' + id + '?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 
   getPersonCast(id: string) {
@@ -178,6 +178,6 @@ export class MoviesService {
     return this._jsonp.get('https://api.themoviedb.org/3/person/' + id + '/movie_credits?callback=JSONP_CALLBACK', { search })
       .map(res => {
         return res.json();
-      })
+      });
   }
 }

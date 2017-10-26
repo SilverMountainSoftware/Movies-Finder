@@ -3,7 +3,7 @@ import {MoviesService} from './movies.service';
 import { Genre } from './interfaces/movies';
 
 @Component({
-  selector: 'app-root',
+  selector: 'mf-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [MoviesService]
