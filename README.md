@@ -1,5 +1,6 @@
 # Moviesfinder
 
+Mac
 This project was generated with [angular-cli](https://github.com/angular/angular-cli)
 
 ## Development server
